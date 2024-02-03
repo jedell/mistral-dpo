@@ -1,0 +1,837 @@
+{
+    "samples": [
+        [
+            {
+                "user": "Looking for a hiking trail. Do you know any good ones around?<|location|>33.4484, -112.0740<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.4484, \"longitude\": -112.0740}, \"radius\": 5000.0, \"types\": [\"hiking_trail\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.parkingOptions\", \"places.reviews\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'hiking_trail' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Is there a good burger joint nearby?<|location|>40.7128, -74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 2000.0, \"types\": [\"burger_restaurant\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.servesBreakfast\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'burger_restaurant' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Looking for a popular dessert spot. Where can I find a dessert cafe nearby?<|location|>41.8781,-87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 2500.0, \"types\": [\"dessert_cafe\"], \"additional_fields\": [\"places.servesDesserts\", \"places.formattedAddress\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'dessert_cafe' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Find me a local bookstore with a children's section.<|location|>41.8781 -87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 1000, \"types\": [\"bookstore\"], \"additional_fields\": [\"places.goodForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'bookstore' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I want to find a soccer field nearby for a quick game with friends.<|location|>34.0522 -118.2437<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 5000.0, \"types\": [\"soccer_field\"], \"additional_fields\": [\"places.location\", \"places.utcOffsetMinutes\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'soccer_field' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I want to buy some fresh produce. Find a farmers market near me.<|location|>37.7749 -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1500.0, \"types\": [\"farmers_market\"], \"additional_fields\": [\"places.name\", \"places.utcOffsetMinutes\", \"places.servesVegetarianFood\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'farmers_market' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I want to find a nice garden to relax and read a book for a few hours in San Francisco.<|location|>37.7749, -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1500.0, \"types\": [\"garden\"], \"additional_fields\": [\"places.displayName\", \"places.rating\", \"places.viewport\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'garden' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need to find a barbershop for a haircut. Can you help me?<|location|>34.0522, -118.2437<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 1500.0, \"types\": [\"barbershop\"], \"additional_fields\": [\"places.name\", \"places.currentOpeningHours\", \"places.reviews\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'barbershop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need to find a pet groomer in Houston. Any insights on their services?<|location|>29.7604 -95.3698<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.7604, \"longitude\": -95.3698}, \"radius\": 2000.0, \"types\": [\"pet_groomer\"], \"additional_fields\": []}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'pet_groomer' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Looking for a jazz club in Chicago. Can you provide the upcoming events schedule?<|location|>41.8781 -87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 3000.0, \"types\": [\"jazz_club\"], \"additional_fields\": []}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'jazz_club' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Is there a botanical garden in Portland that I can visit?<|location|>45.5051 -122.6750<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 45.5051, \"longitude\": -122.6750}, \"radius\": 5000.0, \"types\": [\"botanical_garden\"], \"additional_fields\": [\"places.iconMaskBaseUri\", \"places.editorialSummary\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'botanical_garden' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Looking for a toy store near me in San Diego. Do they offer gift-wrapping services?<|location|>32.7157 -117.1611<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 32.7157, \"longitude\": -117.1611}, \"radius\": 3000.0, \"types\": [\"toy_store\"], \"additional_fields\": []}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'toy_store' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Looking for a music store to buy some vinyl records.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 1500, \"types\": [\"music_store\"], \"additional_fields\": [\"places.name\", \"places.location\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'music_store' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Looking for a place to get my nails done in San Francisco. Any recommendations? <|location|>37.7749 -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 2000.0, \"types\": [\"nail_salon\"], \"additional_fields\": [\"places.businessStatus\", \"places.parkingOptions\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'nail_salon' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm in need of courier service urgently.<|location|>47.6062 -122.3321<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"express courier service\", \"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 2000.0, \"additional_fields\": [\"places.iconMaskBaseUri\", \"places.parse_field\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Got a sweet tooth. Any dessert places with delivery services nearby?<|location|>47.6062,-122.3321<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 2000.0, \"types\": [\"dessert_shop\"], \"additional_fields\": [\"places.name\", \"places.delivery\", \"places.servesDesserts\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'dessert_shop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Is there a zoo or animal park nearby?<|location|>39.9526,-75.1652<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.9526, \"longitude\": -75.1652}, \"radius\": 5000, \"types\": [\"zoo\", \"animal_park\"], \"additional_fields\": [\"places.name\", \"places.location\", \"places.restroom\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'animal_park' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm planning to go camping. Are there any camping sites around?<|location|>37.7749, -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 10000.0, \"types\": [\"camping_site\"], \"additional_fields\": [\"places.displayName\", \"places.fuelOptions\", \"places.websiteUri\"], \"max_result_count\": 5}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'camping_site' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need to pick up some office supplies. Is there an office supply store around here?<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 2000.0, \"types\": [\"office_supply_store\"], \"additional_fields\": [\"places.primaryTypeDisplayName\", \"places.servesBeer\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'office_supply_store' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm looking for a beach to relax. Any nice beaches nearby?<|location|>38.9072,-77.0369<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 38.9072, \"longitude\": -77.0369}, \"radius\": 10000.0, \"types\": [\"beach\"], \"additional_fields\": [\"places.userRatingCount\", \"places.accessibilityOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'beach' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm in the mood for a sweet treat. Where is a good dessert shop nearby? <|location|>47.6062 -122.3321<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 3000, \"types\": [\"servesDesserts\"], \"additional_fields\": [\"places.curbsidePickup\", \"places.servesBrunch\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'servesDesserts' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm on a road trip and need to charge my electric car. Is there an EV charging station nearby? <|location|>36.1627 -86.7816<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 36.1627, \"longitude\": -86.7816}, \"radius\": 5000, \"types\": [\"ev_charge_station\"], \"additional_fields\": [\"places.businessStatus\", \"places.fuelOptions\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'ev_charge_station' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm in need of a clothing store that offers alterations.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 2000.0, \"types\": [\"clothing_store\"], \"additional_fields\": [\"places.parse_field\", \"places.iconMaskBaseUri\", \"places.id\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Looking for a child care agency with bilingual caregivers.<|location|>43.0389,-87.9065<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"child care agency bilingual caregivers\", \"location\": {\"latitude\": 43.0389, \"longitude\": -87.9065}, \"additional_fields\": [\"places.parse_field\", \"places.iconMaskBaseUri\", \"places.id\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for an insurance agency that offers home insurance.<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 5000.0, \"types\": [\"insurance_agency\"], \"additional_fields\": [\"places.parse_field\", \"places.editorialSummary\", \"places.iconMaskBaseUri\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I need to find a hotel with a restroom nearby.<|location|>39.2904,-76.6122<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"hotel\", \"location\": {\"latitude\": 39.2904, \"longitude\": -76.6122}, \"radius\": 5000.0, \"additional_fields\": [\"places.restroom\", \"places.name\", \"places.parse_field\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a hardware store that offers delivery services near downtown Portland.<|location|>45.5051 -122.6750<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"hardware store delivery downtown Portland\", \"location\": {\"latitude\": 45.5051, \"longitude\": -122.6750}, \"radius\": 2000.0, \"additional_fields\": [\"places.delivery\", \"places.parse_field\", \"places.displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm exploring the city. Any unique locations to check out?<|location|>33.4484, -112.0740<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.4484, \"longitude\": -112.0740}, \"radius\": 3000.0, \"types\": [\"unique_location\"], \"additional_fields\": [\"places.name\", \"places.location\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'unique_location' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm craving some sushi, can you help me find a good sushi bar nearby? <|location|>40.7128 -74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 1500.0, \"types\": [\"sushi_bar\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.rating\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'sushi_bar' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need a reliable veterinarian clinic for my pet in Miami. <|location|>25.7617 -80.1918<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 25.7617, \"longitude\": -80.1918}, \"radius\": 2000.0, \"types\": [\"veterinarian_clinic\"], \"additional_fields\": [\"places.name\", \"places.nationalPhoneNumber\", \"places.formattedAddress\", \"places.goodForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'veterinarian_clinic' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm looking for a bookstore with a nice ambiance in San Francisco. <|location|>37.7749 -122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1500.0, \"types\": [\"bookstore\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.servesCoffee\", \"places.goodForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'bookstore' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'd like to find a flower shop with same-day delivery, please. <|location|>41.8781 -87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 1000.0, \"types\": [\"flower_shop\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.delivery\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'flower_shop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Find me a music store with instruments for sale nearby. <|location|>40.7128 -74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 1500.0, \"types\": [\"music_store\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.servesBrunch\", \"places.paymentOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'music_store' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Find me a computer repair shop that offers same-day service. <|location|>37.7749 -122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1000.0, \"types\": [\"computer_repair_shop\"], \"additional_fields\": [\"places.name\", \"places.formattedAddress\", \"places.takeout\", \"places.curbsidePickup\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'computer_repair_shop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need to find a pediatrician for my child in Boston. <|location|>42.3601 -71.0589<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3601, \"longitude\": -71.0589}, \"radius\": 2000.0, \"types\": [\"pediatrician\"], \"additional_fields\": [\"places.name\", \"places.nationalPhoneNumber\", \"places.formattedAddress\", \"places.goodForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'pediatrician' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Where can I rent some sports equipment in Orlando for a day of fun? <|location|>28.5383,-81.3792<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 28.5383, \"longitude\": -81.3792}, \"radius\": 3000.0, \"types\": [\"sports_equipment_rental\"], \"additional_fields\": [\"places.regularOpeningHours\", \"places.parkingOptions\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'sports_equipment_rental' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I'm looking for a quiet bookstore in San Jose to spend the afternoon. <|location|>37.3382,-121.8863<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.3382, \"longitude\": -121.8863}, \"radius\": 3000.0, \"types\": [\"bookstore\"], \"additional_fields\": [\"places.regularOpeningHours\", \"places.userRatingCount\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'bookstore' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "I need to find a car wash that offers valet services and serves coffee.<|location|>32.7157 -117.1611<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 32.7157, \"longitude\": -117.1611}, \"radius\": 2000.0, \"types\": [\"car_wash\"], \"additional_fields\": [\"places.parse_field\", \"places.servesCoffee\", \"places.photos\"], \"max_result_count\": 3}}<|api_call_end|>"
+            },
+            "Invalid field 'places.parse_field' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Looking for a quick bite. Any fast food places open right now?<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 3000.0, \"types\": [\"fast_food\"], \"additional_fields\": [\"places.regularOpeningHours\", \"places.servesDesserts\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'fast_food' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Feeling like shopping. Where can I find a mall nearby?<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 3000.0, \"types\": [\"mall\"], \"additional_fields\": [\"places.photos\", \"places.regularOpeningHours\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'mall' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Need a quick bite. Where can I find a food truck?<|location|>37.7749,-122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1000.0, \"types\": [\"food_truck\"], \"additional_fields\": [\"places.photos\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'food_truck' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Any dessert places around here?<|location|>29.9511,-90.0715<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.9511, \"longitude\": -90.0715}, \"radius\": 2000.0, \"types\": [\"dessert_shop\"], \"additional_fields\": [\"places.photos\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'dessert_shop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Are there any historical landmarks around here that are worth visiting? <|location|>37.7749, -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 1800.0, \"types\": [\"landmark\"], \"additional_fields\": [\"places.photos\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'landmark' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Show me the most popular landmarks in the area.<|location|>37.7749,-122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 5000.0, \"types\": [\"landmark\"], \"additional_fields\": [\"places.photos\", \"places.rating\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'landmark' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Show me a preschool with a large outdoor play area in Los Angeles.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 5000.0, \"types\": [\"preschool\"], \"additional_fields\": [\"places.photos\", \"places.viewport\", \"allowsDogs\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a gym in Chicago with a well-equipped weight room.<|location|>41.8781,-87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 2000.0, \"types\": [\"gym\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\", \"priceLevel\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me a turkish restaurant in Miami that's good for groups.<|location|>25.7617,-80.1918<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 25.7617, \"longitude\": -80.1918}, \"radius\": 4000.0, \"types\": [\"turkish_restaurant\"], \"additional_fields\": [\"places.photos\", \"goodForGroups\", \"dineIn\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'goodForGroups' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Is there a pizza restaurant in Seattle with a view of the water?<|location|>47.6062,-122.3321<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 5000.0, \"types\": [\"pizza_restaurant\"], \"additional_fields\": [\"places.photos\", \"viewport\", \"servesDinner\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'viewport' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a park in San Diego that allows dogs and has a playground.<|location|>32.7157,-117.1611<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 32.7157, \"longitude\": -117.1611}, \"radius\": 6000.0, \"types\": [\"park\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"accessibilityOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a secondary school in Houston with sports facilities?<|location|>29.7604,-95.3698<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.7604, \"longitude\": -95.3698}, \"radius\": 7000.0, \"types\": [\"secondary_school\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\", \"parkingOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me Mediterranean restaurants in Atlanta that have outdoor seating.<|location|>33.7490,-84.3880<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.7490, \"longitude\": -84.3880}, \"radius\": 3500.0, \"types\": [\"mediterranean_restaurant\"], \"additional_fields\": [\"places.photos\", \"dineIn\", \"goodForGroups\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'dineIn' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I need to find a police station in Denver that is accessible for people in wheelchairs.<|location|>39.7392,-104.9903<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.7392, \"longitude\": -104.9903}, \"radius\": 10000.0, \"types\": [\"police\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a courier service in Phoenix that operates 24/7.<|location|>33.4484,-112.0740<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.4484, \"longitude\": -112.0740}, \"radius\": 8000.0, \"types\": [\"courier_service\"], \"additional_fields\": [\"places.photos\", \"websiteUri\", \"googleMapsUri\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'websiteUri' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me parks with a lot of greenery and picnic areas in Philadelphia.<|location|>39.9526,-75.1652<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.9526, \"longitude\": -75.1652}, \"radius\": 4000.0, \"types\": [\"park\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"restroom\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "What gyms in Boston have a sauna and a pool?<|location|>42.3601,-71.0589<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3601, \"longitude\": -71.0589}, \"radius\": 5000.0, \"types\": [\"gym\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\", \"restroom\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find preschools in Orlando that have a safe indoor play area?<|location|>28.5383,-81.3792<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 28.5383, \"longitude\": -81.3792}, \"radius\": 3000.0, \"types\": [\"preschool\"], \"additional_fields\": [\"places.photos\", \"viewport\", \"allowsDogs\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'viewport' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me a Turkish restaurant in Dallas that serves wine.<|location|>32.7767,-96.7970<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 32.7767, \"longitude\": -96.7970}, \"radius\": 6000.0, \"types\": [\"turkish_restaurant\"], \"additional_fields\": [\"places.photos\", \"servesWine\", \"goodForGroups\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesWine' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a park in Austin where I can take my dog and enjoy nature.<|location|>30.2672,-97.7431<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 30.2672, \"longitude\": -97.7431}, \"radius\": 5000.0, \"types\": [\"park\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"googleMapsUri\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a private guest room in New York that's pet-friendly and has a nice view?<|location|>40.7128, -74.0060<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 10000.0, \"types\": [\"private_guest_room\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.goodForPets\", \"places.views\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.goodForPets' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Where can I find a discount store in Atlanta that has a good selection of electronics?<|location|>33.7490, -84.3880<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.7490, \"longitude\": -84.3880}, \"radius\": 10000.0, \"types\": [\"discount_store\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.subDestinations\", \"places.electronicsSection\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.electronicsSection' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I need a quiet coffee shop with strong wifi in Seattle. Where can I work remotely?<|location|>47.6062, -122.3321<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 5000.0, \"types\": [\"cafe\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.wifiQuality\", \"places.quietSpaces\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.wifiQuality' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me the most picturesque farmstays in the area of Denver.<|location|>39.7392, -104.9903<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.7392, \"longitude\": -104.9903}, \"radius\": 30000.0, \"types\": [\"farmstay\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.views\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.views' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I want to explore local mosques with beautiful architecture in Phoenix. Can you help?<|location|>33.4484, -112.0740<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.4484, \"longitude\": -112.0740}, \"radius\": 10000.0, \"types\": [\"mosque\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.architectureStyle\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.architectureStyle' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a child care agency in Boston that's known for its outdoor play area.<|location|>42.3601, -71.0589<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3601, \"longitude\": -71.0589}, \"radius\": 5000.0, \"types\": [\"child_care_agency\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.outdoorPlayArea\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.outdoorPlayArea' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a hotel in Orlando with a themed interior design?<|location|>28.5383, -81.3792<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 28.5383, \"longitude\": -81.3792}, \"radius\": 10000.0, \"types\": [\"hotel\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.theme\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.theme' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Where can I find a clinic in Las Vegas with a good reputation for dermatology?<|location|>36.1699, -115.1398<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 36.1699, \"longitude\": -115.1398}, \"radius\": 8000.0, \"types\": [\"doctor\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.specialization\", \"places.rating\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.specialization' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a meal takeaway in Minneapolis that offers healthy vegetarian options.<|location|>44.9778, -93.2650<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 44.9778, \"longitude\": -93.2650}, \"radius\": 7000.0, \"types\": [\"meal_takeaway\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.vegetarianOptions\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.vegetarianOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me cafes in Austin that are perfect for reading and have a literary theme.<|location|>30.2672, -97.7431<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 30.2672, \"longitude\": -97.7431}, \"radius\": 5000.0, \"types\": [\"cafe\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.theme\", \"places.quiet\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.theme' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Where can I find a bar in Nashville with a rooftop view and craft cocktails?<|location|>36.1627, -86.7816<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 36.1627, \"longitude\": -86.7816}, \"radius\": 6000.0, \"types\": [\"bar\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.rooftop\", \"places.servesCocktails\"]}}<|api_call_end|>"
+            },
+            "Invalid field 'places.rooftop' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me hotels in Chicago that have a modern interior design.<|location|>41.8781, -87.6298<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 5000.0, \"types\": [\"hotel\"], \"additional_fields\": [\"places.photos\", \"primaryTypeDisplayName\", \"menuForChildren\", \"iconBackgroundColor\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'primaryTypeDisplayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a breakfast restaurant in New York City with visually appealing desserts.<|location|>40.7128, -74.0060<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 3000.0, \"types\": [\"breakfast_restaurant\"], \"additional_fields\": [\"places.photos\", \"servesDesserts\", \"googleMapsUri\", \"currentOpeningHours\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesDesserts' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I want to see themed cafes, like literary ones, in San Francisco.<|location|>37.7749, -122.4194<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"themed literary cafe\", \"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 4000.0, \"additional_fields\": [\"places.photos\", \"reviews\", \"accessibilityOptions\", \"primaryType\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'reviews' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Locate a museum in Los Angeles that features modern art exhibits.<|location|>34.0522, -118.2437<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 6000.0, \"types\": [\"museum\"], \"additional_fields\": [\"places.photos\", \"primaryTypeDisplayName\", \"businessStatus\", \"parkingOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'primaryTypeDisplayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a spa in Miami Beach with a serene atmosphere?<|location|>25.7907, -80.1300<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 25.7907, \"longitude\": -80.1300}, \"radius\": 3000.0, \"types\": [\"spa\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\", \"googleMapsUri\", \"parkingOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me an ice cream shop in Seattle that's pet-friendly.<|location|>47.6062, -122.3321<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 2500.0, \"types\": [\"ice_cream_shop\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"reviews\", \"currentOpeningHours\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me Turkish restaurants in Boston with cozy outdoor seating.<|location|>42.3601, -71.0589<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3601, \"longitude\": -71.0589}, \"radius\": 3500.0, \"types\": [\"turkish_restaurant\"], \"additional_fields\": [\"places.photos\", \"currentSecondaryOpeningHours\", \"reservable\", \"curbsidePickup\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'currentSecondaryOpeningHours' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Are there any car rental agencies in Las Vegas with a spacious parking area?<|location|>36.1699, -115.1398<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 36.1699, \"longitude\": -115.1398}, \"radius\": 4000.0, \"types\": [\"car_rental\"], \"additional_fields\": [\"places.photos\", \"parkingOptions\", \"businessStatus\", \"reviews\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'parkingOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a breakfast restaurant in Atlanta that offers gluten-free options.<|location|>33.7490, -84.3880<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.7490, \"longitude\": -84.3880}, \"radius\": 4000.0, \"types\": [\"breakfast_restaurant\"], \"additional_fields\": [\"places.photos\", \"menuForChildren\", \"servesLunch\", \"googleMapsUri\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'menuForChildren' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I need a storage facility in Denver that's secure and has easy access.<|location|>39.7392, -104.9903<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.7392, \"longitude\": -104.9903}, \"radius\": 5000.0, \"types\": [\"storage\"], \"additional_fields\": [\"places.photos\", \"accessibilityOptions\", \"parkingOptions\", \"businessStatus\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'accessibilityOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me American restaurants in Philadelphia that are dog-friendly.<|location|>39.9526, -75.1652<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.9526, \"longitude\": -75.1652}, \"radius\": 3000.0, \"types\": [\"american_restaurant\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"reviews\", \"servesLunch\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me an Indonesian restaurant in San Diego that has a great view.<|location|>32.7157, -117.1611<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 32.7157, \"longitude\": -117.1611}, \"radius\": 5000.0, \"types\": [\"indonesian_restaurant\"], \"additional_fields\": [\"places.photos\", \"googleMapsUri\", \"servesDesserts\", \"primaryTypeDisplayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'googleMapsUri' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Look for a spa in Houston where I can relax this weekend.<|location|>29.7604, -95.3698<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.7604, \"longitude\": -95.3698}, \"radius\": 7000.0, \"types\": [\"spa\"], \"additional_fields\": [\"places.photos\", \"reservable\", \"parkingOptions\", \"reviews\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'reservable' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a museum in Washington D.C. that has an exhibit on American history?<|location|>38.9072, -77.0369<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 38.9072, \"longitude\": -77.0369}, \"radius\": 2000.0, \"types\": [\"museum\"], \"additional_fields\": [\"places.photos\", \"primaryTypeDisplayName\", \"accessibilityOptions\", \"parkingOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'primaryTypeDisplayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a hotel near Orlando with a large event space.<|location|>28.5383, -81.3792<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 28.5383, \"longitude\": -81.3792}, \"radius\": 8000.0, \"types\": [\"hotel\"], \"additional_fields\": [\"places.photos\", \"reservable\", \"googleMapsUri\", \"menuForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'reservable' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me a cafe in Seattle that's dog-friendly and has a space to work.<|location|>47.6062 -122.3321<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"dog-friendly cafe with workspace\", \"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 5000.0, \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"dineIn\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Locate a vegan restaurant in Denver that offers outdoor seating.<|location|>39.7392 -104.9903<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"vegan restaurant outdoor seating\", \"location\": {\"latitude\": 39.7392, \"longitude\": -104.9903}, \"radius\": 5000.0, \"additional_fields\": [\"places.photos\", \"servesVegetarianFood\", \"dineIn\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesVegetarianFood' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a museum in New York where I can see modern art exhibits.<|location|>40.7128 -74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 5000.0, \"types\": [\"museum\"], \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I want a campsite near San Francisco that offers paddleboarding.<|location|>37.7749 -122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"campsite with paddleboarding\", \"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 10000.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me where I can find a convenience store with fresh coffee near Miami.<|location|>25.7617 -80.1918<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 25.7617, \"longitude\": -80.1918}, \"radius\": 3000.0, \"types\": [\"convenience_store\"], \"additional_fields\": [\"places.photos\", \"servesCoffee\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesCoffee' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Are there any extended stay hotels in Los Angeles with a modern design?<|location|>34.0522 -118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"extended stay hotel modern design\", \"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 8000.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Locate a gas station in Chicago that offers a variety of fuel options.<|location|>41.8781 -87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 4000.0, \"types\": [\"gas_station\"], \"additional_fields\": [\"places.photos\", \"fuelOptions\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'fuelOptions' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a caf\u00e9 in Atlanta where I can see creative desserts.<|location|>33.7490 -84.3880<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"cafe with creative desserts\", \"location\": {\"latitude\": 33.7490, \"longitude\": -84.3880}, \"radius\": 5000.0, \"additional_fields\": [\"places.photos\", \"servesDesserts\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesDesserts' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Search for an ATM in Houston that's accessible 24/7.<|location|>29.7604 -95.3698<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.7604, \"longitude\": -95.3698}, \"radius\": 2000.0, \"types\": [\"atm\"], \"additional_fields\": [\"places.photos\", \"businessStatus\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'businessStatus' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me universities in Boston with historical buildings.<|location|>42.3601 -71.0589<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3601, \"longitude\": -71.0589}, \"radius\": 10000.0, \"types\": [\"university\"], \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a doctor in San Diego who specializes in sports injuries.<|location|>32.7157 -117.1611<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"doctor sports injuries\", \"location\": {\"latitude\": 32.7157, \"longitude\": -117.1611}, \"radius\": 5000.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a cafe in Portland that's popular for its brunch.<|location|>45.5122 -122.6587<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"cafe popular brunch\", \"location\": {\"latitude\": 45.5122, \"longitude\": -122.6587}, \"radius\": 3000.0, \"additional_fields\": [\"places.photos\", \"servesBrunch\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'servesBrunch' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me boutique stores in Philadelphia that offer unique fashion items.<|location|>39.9526 -75.1652<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"unique fashion boutique\", \"location\": {\"latitude\": 39.9526, \"longitude\": -75.1652}, \"radius\": 5000.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a bar in Las Vegas that has a neon sign decor.<|location|>36.1699 -115.1398<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"bar with neon sign decor\", \"location\": {\"latitude\": 36.1699, \"longitude\": -115.1398}, \"radius\": 2500.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Are there any restaurants in Dallas decorated for the holiday season?<|location|>32.7767 -96.7970<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"restaurant holiday decorations\", \"location\": {\"latitude\": 32.7767, \"longitude\": -96.7970}, \"radius\": 7000.0, \"additional_fields\": [\"places.photos\", \"displayName\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a park with a great view of the city skyline?<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"park city skyline view\", \"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 5000, \"additional_fields\": [\"places.photos\", \"displayName\", \"shortFormattedAddress\", \"utcOffsetMinutes\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find me a book store that has a cozy reading nook.<|location|>47.6062,-122.3321<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 47.6062, \"longitude\": -122.3321}, \"radius\": 3000, \"types\": [\"book_store\"], \"additional_fields\": [\"places.photos\", \"displayName\", \"reviews\", \"goodForGroups\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me campsites with beautiful sunrise views.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 10000, \"types\": [\"campground\"], \"additional_fields\": [\"places.photos\", \"displayName\", \"userRatingCount\", \"reviews\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Where can I find a hair salon with modern interior design?<|location|>25.7617,-80.1918<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"hair salon modern interior\", \"location\": {\"latitude\": 25.7617, \"longitude\": -80.1918}, \"radius\": 2000, \"additional_fields\": [\"places.photos\", \"displayName\", \"reviews\", \"businessStatus\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a jewelry store with a unique selection of engagement rings.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 5000, \"types\": [\"jewelry_store\"], \"additional_fields\": [\"places.photos\", \"displayName\", \"reviews\", \"userRatingCount\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Find a car wash that also provides detailing services.<|location|>36.1699,-115.1398<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"car wash detailing services\", \"location\": {\"latitude\": 36.1699, \"longitude\": -115.1398}, \"radius\": 2500, \"additional_fields\": [\"places.photos\", \"displayName\", \"reviews\", \"userRatingCount\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me a ski resort that's family-friendly and offers lessons for beginners.<|location|>39.7392,-104.9903<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.7392, \"longitude\": -104.9903}, \"radius\": 15000, \"types\": [\"ski_resort\"], \"additional_fields\": [\"places.photos\", \"displayName\", \"reviews\", \"menuForChildren\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Is there a sports complex with a track for sprinting?<|location|>33.4484,-112.0740<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"sports complex sprinting track\", \"location\": {\"latitude\": 33.4484, \"longitude\": -112.0740}, \"radius\": 4000, \"additional_fields\": [\"places.photos\", \"displayName\", \"shortFormattedAddress\", \"userRatingCount\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you find a police station that has a community meeting room?<|location|>39.9526,-75.1652<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 39.9526, \"longitude\": -75.1652}, \"radius\": 7000, \"types\": [\"police\"], \"additional_fields\": [\"places.photos\", \"displayName\", \"accessibilityOptions\", \"businessStatus\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me lebanese restaurants with a cozy outdoor seating area.<|location|>41.8781,-87.6298<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_text\", \"parameters\": {\"query\": \"lebanese restaurant outdoor seating\", \"location\": {\"latitude\": 41.8781, \"longitude\": -87.6298}, \"radius\": 4000, \"additional_fields\": [\"places.photos\", \"displayName\", \"goodForGroups\", \"servesBrunch\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'displayName' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Can you recommend a hiking area with stunning waterfall views?<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 10000.0, \"types\": [\"hiking_area\"], \"additional_fields\": [\"places.photos\", \"userRatingCount\", \"rating\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'userRatingCount' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "Show me brunch restaurants in the area that allow dogs and have outdoor seating.<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 5000.0, \"types\": [\"brunch_restaurant\"], \"additional_fields\": [\"places.photos\", \"allowsDogs\", \"outdoorSeating\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'allowsDogs' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm in the mood for Japanese cuisine tonight. Can you find me a Japanese restaurant with a high user rating count?<|location|>40.7128,-74.0060<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 40.7128, \"longitude\": -74.0060}, \"radius\": 5000.0, \"types\": [\"japanese_restaurant\"], \"additional_fields\": [\"places.photos\", \"rating\", \"userRatingCount\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'rating' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I need to find a clothing store that offers unique fashion pieces. Can it have a high user rating?<|location|>34.0522,-118.2437<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 3000.0, \"types\": [\"clothing_store\"], \"additional_fields\": [\"places.photos\", \"userRatingCount\", \"rating\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'userRatingCount' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I have a sweet tooth. Where can I get some delicious desserts?<|location|>33.7490, -84.3880<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 33.7490, \"longitude\": -84.3880}, \"radius\": 5000.0, \"types\": [\"dessert_shop\"], \"additional_fields\": [\"places.name\", \"places.rating\", \"places.businessStatus\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'dessert_shop' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Help me find a scenic campsite in Los Angeles where I can also do paddleboarding.<|location|>34.0522, -118.2437<|location_end|>",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 34.0522, \"longitude\": -118.2437}, \"radius\": 20000.0, \"types\": [\"campsite\"], \"additional_fields\": [\"places.photos\", \"places.displayName\", \"places.subDestinations\", \"places.paddleboardingOptions\"]}}<|api_call_end|>"
+            },
+            "Invalid 'type' value. 'campsite' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "Find me a zoo where I can see photos of the exotic animals and learn about their habitats.<|location|>37.7749,-122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 7000.0, \"types\": [\"zoo\"], \"additional_fields\": [\"places.photos\", \"reviews\", \"googleMapsUri\"]}}<|api_call_end|>\n"
+            },
+            "Invalid field 'reviews' in 'additional_fields'. The field does not exist."
+        ],
+        [
+            {
+                "user": "I'm looking for a place to have dinner and watch a sports game.<|location|>29.7604 -95.3698<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 29.7604, \"longitude\": -95.3698}, \"radius\": 5000.0, \"types\": [\"restaurant\", \"sports_bar\"], \"additional_fields\": [\"places.displayName\", \"places.rating\", \"places.goodForWatchingSports\"]}}<|api_call_end|>\n"
+            },
+            "Invalid 'type' value. 'sports_bar' is not a recognized place type."
+        ],
+        [
+            {
+                "user": "List down the nearby podiums where university speeches take place.<|location|>42.3736 -71.1097<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 42.3736, \"longitude\": -71.1097}, \"radius\": 2000.0, \"places.types\": [\"university\"], \"additional_fields\": [\"places.types\"]}}<|api_call_end|>\n"
+            },
+            "Missing or invalid 'types'. 'types' must be a list of strings."
+        ],
+        [
+            {
+                "user": "I'm in search for a playground for kids in this area.<|location|>37.7749 -122.4194<|location_end|>\n",
+                "assistant": "<|api_call|>{\"function\": \"search_nearby\", \"parameters\": {\"location\": {\"latitude\": 37.7749, \"longitude\": -122.4194}, \"radius\": 5000.0, \"places.types\": [\"playground\"], \"additional_fields\": [\"places.types\"]}}<|api_call_end|>\n"
+            },
+            "Missing or invalid 'types'. 'types' must be a list of strings."
+        ]
+    ]
+}
